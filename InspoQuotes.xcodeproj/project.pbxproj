@@ -37,6 +37,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		726C497522D429A300E331B0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD18A83D21285CAF00F6BF05 /* AppDelegate.swift */,
+				AD18A84F21285D4800F6BF05 /* QuoteTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		726C497622D429B500E331B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		726C497722D429BA00E331B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD18A84121285CAF00F6BF05 /* Main.storyboard */,
+				AD18A84421285CB000F6BF05 /* Assets.xcassets */,
+				AD18A84621285CB000F6BF05 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AD18A83121285CAF00F6BF05 = {
 			isa = PBXGroup;
 			children = (
@@ -57,13 +83,11 @@
 		AD18A83C21285CAF00F6BF05 /* InspoQuotes */ = {
 			isa = PBXGroup;
 			children = (
-				AD18A83D21285CAF00F6BF05 /* AppDelegate.swift */,
-				AD18A84F21285D4800F6BF05 /* QuoteTableViewController.swift */,
-				AD18A84121285CAF00F6BF05 /* Main.storyboard */,
-				AD18A84421285CB000F6BF05 /* Assets.xcassets */,
-				AD18A84621285CB000F6BF05 /* LaunchScreen.storyboard */,
-				AD18A8552128605C00F6BF05 /* Supporting Files */,
+				726C497522D429A300E331B0 /* Controller */,
 				AD18A84921285CB000F6BF05 /* Info.plist */,
+				726C497622D429B500E331B0 /* Model */,
+				AD18A8552128605C00F6BF05 /* Supporting Files */,
+				726C497722D429BA00E331B0 /* View */,
 			);
 			path = InspoQuotes;
 			sourceTree = "<group>";
