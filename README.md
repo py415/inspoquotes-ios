@@ -4,8 +4,7 @@
 1. [Overview](#Overview)
 2. [Product Spec](#Product-Spec)
 3. [App Walkthrough](#App-Walkthrough)
-4. [Open-Source libraries used](#Open-Source-libraries-used)
-5. [Credits](#Credits)
+4. [Credits](#Credits)
 
 ## Overview
 ### Description
@@ -23,11 +22,7 @@ InspoQuotes is a freemium app that gives some free inspiration and a lot of paid
 
 Here's a GIF of how the app works:
 
-<img src="ADD_GIF_LINK" width=250><br>
-
-## Open-source libraries used
-
-- [LIBRARY NAME](ADD_SOURCE_LINK_HERE) - Add a description here.
+<img src="https://imgur.com/SsxeSJh.gif" width=250><br>
 
 ## Credits
 
