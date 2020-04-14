@@ -62,10 +62,11 @@ class QuoteTableViewController: UITableViewController, SKPaymentTransactionObser
         if indexPath.row < quotesToShow.count {
             cell.textLabel?.text = quotesToShow[indexPath.row]
             cell.textLabel?.numberOfLines = 0
-            cell.textLabel?.textColor = UIColor.black
+            cell.textLabel?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            cell.accessoryType = .none
         } else {
             cell.textLabel?.text = "Get More Quotes"
-            cell.textLabel?.textColor = UIColor.blue
+            cell.textLabel?.textColor = #colorLiteral(red: 0.1568627451, green: 0.6666666667, blue: 0.7529411765, alpha: 1)
             cell.accessoryType = .disclosureIndicator
         }
 
@@ -79,8 +80,8 @@ class QuoteTableViewController: UITableViewController, SKPaymentTransactionObser
         
         if indexPath.row == quotesToShow.count {
             buyPremiumQuotes()
-//            showPremiumQuotes()
-//            tableView.reloadData()
+            showPremiumQuotes()
+            tableView.reloadData()
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
