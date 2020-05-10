@@ -2,7 +2,7 @@
 
 ## Table of Contents
 1. [Overview](#Overview)
-2. [Product Spec](#Product-Spec)
+2. [Product Specs](#Product-Specs)
 3. [App Walkthrough](#App-Walkthrough)
 4. [Credits](#Credits)
 
@@ -11,7 +11,7 @@
 
 InspoQuotes is a freemium app that gives some free inspiration and a lot of paid inspiration.
 
-## Product Spec
+## Product Specs
 ### User Stories
 
 - [X] User shall be able to see a list of free inspirational quotes.
@@ -22,8 +22,8 @@ InspoQuotes is a freemium app that gives some free inspiration and a lot of paid
 
 Here's a GIF of how the app works:
 
-<img src="https://imgur.com/SsxeSJh.gif" width=250><br>
+<img src="https://user-images.githubusercontent.com/35745973/81492034-5b48ff80-9249-11ea-81e0-2576046008e4.gif" width=250><br>
 
 ## Credits
 
->This is a companion project to The App Brewery's Complete App Developement Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
+>This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
