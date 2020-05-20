@@ -9,11 +9,10 @@
 import UIKit
 import StoreKit
 
-class QuoteTableViewController: UITableViewController, SKPaymentTransactionObserver {
+class QuoteTableViewController: UITableViewController {
     
-    let productId = "INSERT PRODUCT ID"
-    
-    var quotesToShow = [
+    // MARK: - Properties
+    private var quotesToShow = [
         "Our greatest glory is not in never falling, but in rising every time we fall. — Confucius",
         "All our dreams can come true, if we have the courage to pursue them. – Walt Disney",
         "It does not matter how slowly you go as long as you do not stop. – Confucius",
@@ -22,7 +21,8 @@ class QuoteTableViewController: UITableViewController, SKPaymentTransactionObser
         "Hardships often prepare ordinary people for an extraordinary destiny. – C.S. Lewis"
     ]
     
-    let premiumQuotes = [
+    private let productId = "INSERT PRODUCT ID"
+    private let premiumQuotes = [
         "Believe in yourself. You are braver than you think, more talented than you know, and capable of more than you imagine. ― Roy T. Bennett",
         "I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear. – Nelson Mandela",
         "There is only one thing that makes a dream impossible to achieve: the fear of failure. ― Paulo Coelho",
@@ -43,7 +43,7 @@ class QuoteTableViewController: UITableViewController, SKPaymentTransactionObser
         
     }
 
-    // MARK: - Table view data source
+    // MARK: - UITableViewDataSource Section
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -74,7 +74,7 @@ class QuoteTableViewController: UITableViewController, SKPaymentTransactionObser
         
     }
 
-    // MARK: - Table view delegate methods
+    // MARK: - UITableViewDelegate Section
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -90,7 +90,7 @@ class QuoteTableViewController: UITableViewController, SKPaymentTransactionObser
     
     // MARK: - In-App Purchase Methods
     
-    func buyPremiumQuotes() {
+    private func buyPremiumQuotes() {
         
         if SKPaymentQueue.canMakePayments() {
             // Can make payments
@@ -104,6 +104,43 @@ class QuoteTableViewController: UITableViewController, SKPaymentTransactionObser
         }
         
     }
+    
+    private func showPremiumQuotes() {
+        
+        UserDefaults.standard.set(true, forKey: productId)
+        
+        quotesToShow.append(contentsOf: premiumQuotes)
+        tableView.reloadData()
+        
+    }
+    
+    private func isPurchased() -> Bool {
+        
+        let purchaseStatus = UserDefaults.standard.bool(forKey: productId)
+        
+        if purchaseStatus {
+            print("Previously purchased")
+            return true
+        } else {
+            print("Never purchased")
+            return false
+        }
+        
+    }
+    
+    // MARK: - IBAction Section
+    
+    @IBAction func restorePressed(_ sender: UIBarButtonItem) {
+
+        SKPaymentQueue.default().restoreCompletedTransactions()
+        
+    }
+
+}
+
+extension QuoteTableViewController: SKPaymentTransactionObserver {
+    
+    // MARK: - SKPaymentTransactionObserver Section
     
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         
@@ -139,33 +176,4 @@ class QuoteTableViewController: UITableViewController, SKPaymentTransactionObser
         
     }
     
-    func showPremiumQuotes() {
-        
-        UserDefaults.standard.set(true, forKey: productId)
-        
-        quotesToShow.append(contentsOf: premiumQuotes)
-        tableView.reloadData()
-        
-    }
-    
-    func isPurchased() -> Bool {
-        
-        let purchaseStatus = UserDefaults.standard.bool(forKey: productId)
-        
-        if purchaseStatus {
-            print("Previously purchased")
-            return true
-        } else {
-            print("Never purchased")
-            return false
-        }
-        
-    }
-    
-    @IBAction func restorePressed(_ sender: UIBarButtonItem) {
-
-        SKPaymentQueue.default().restoreCompletedTransactions()
-        
-    }
-
 }

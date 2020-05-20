@@ -46,13 +46,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		726C497622D429B500E331B0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		726C497722D429BA00E331B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				726C497522D429A300E331B0 /* Controller */,
-				726C497622D429B500E331B0 /* Model */,
 				AD18A8552128605C00F6BF05 /* Supporting Files */,
 				726C497722D429BA00E331B0 /* View */,
 			);
