@@ -22,7 +22,7 @@ InspoQuotes is a freemium app that gives some free inspiration and a lot of paid
 
 Here's a GIF of how the app works:
 
-<img src="https://user-images.githubusercontent.com/35745973/81492034-5b48ff80-9249-11ea-81e0-2576046008e4.gif" width=250>
+<img src="https://github.com/py415/app-resources/blob/master/ios/ios-inspoquotes.gif" width=250>
 
 ## Credits
 
